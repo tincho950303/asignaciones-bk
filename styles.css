@@ -1,0 +1,140 @@
+/* Estilo base */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #141414;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Formulario */
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input[type="number"] {
+  padding: 10px;
+  width: 20%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  text-align: center;
+  -moz-appearance: textfield;
+}
+
+button {
+  padding: 12px;
+  width: 25%;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Lista de asignaciones */
+#asignaciones {
+  margin-top: 25px;
+  list-style: none;
+  padding: 0;
+}
+
+#asignaciones li {
+  background-color: #e9f5ff;
+  margin-bottom: 10px;
+  padding: 12px;
+  border-left: 5px solid #007bff;
+  border-radius: 6px;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  input, button {
+    font-size: 14px;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+/* Cada fila */
+.fila-asignacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  background-color: #1e1e1e;
+  border-left: 4px solid #007bff;
+  border-radius: 6px;
+  font-family: monospace;
+  flex-wrap: wrap;
+  color: #000;
+}
+
+/* Columnas */
+.col-fecha {
+  min-width: 120px;
+  flex: 1;
+}
+
+.col-hora {
+  min-width: 110px;
+  flex: 1;
+  text-align: center;
+}
+
+.col-tienda {
+  flex: 2;
+  text-align: right;
+}
+
+@media (max-width: 480px) {
+  .fila-asignacion {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .col-hora,
+  .col-tienda {
+    text-align: center;
+  }
+}

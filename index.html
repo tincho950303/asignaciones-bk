@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mis Asignaciones | BK</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Consulta de Asignaciones</h1>
+      <form id="formulario">       
+        <input type="number" id="legajo" value= "122005" required placeholder="Ingresá tu legajo"/>
+        <button type="submit">Consultar</button>
+        <button id="exportarCSV" style="margin-top: 20px;" disabled>Exportar a CSV</button>
+      </form>
+      <ul id="asignaciones"></ul>
+    </div>
+   
+    
+    <script src="main.js"></script>
+    <script src="exportar.js"></script>
+  </body>
+</html>
